@@ -1,0 +1,15 @@
+services:
+  audio-app:
+    build: ./audio-app
+    container_name: audio-app
+    ports:
+      - 3000:3000
+    stdin_open: true
+    tty: true
+  audio-backend:
+    build: ./audio-backend
+    container_name: audio-backend
+    ports:
+      - 9000:9000
+    stdin_open: true
+    tty: true
