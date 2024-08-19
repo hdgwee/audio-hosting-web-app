@@ -10,7 +10,6 @@ app.use(bodyParser.urlencoded({ limit: "50mb", extended: true, parameterLimit: 5
 const whitelist = ['http://localhost:3000', 'http://localhost:9000']
 const corsOptions = {
     origin: (origin, callback) => {
-        console.log(origin)
         if (!origin || whitelist.includes(origin)) {
             callback(null, true)
         } else {

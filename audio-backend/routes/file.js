@@ -19,7 +19,6 @@ File.init({
 sequelize.sync()
 
 router.post('/', async (req, res) => {
-    console.log(req.body)
     await File.create({
         description: req.body.description,
         category: req.body.category,

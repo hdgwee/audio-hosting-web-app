@@ -38,7 +38,6 @@ const App = ({ username }) => {
         >
           <Col span={24}>
             {isLoggedIn ? null : <Login />}
-            {console.log(isLoggedIn, selectedKey)}
             {isLoggedIn && selectedKey === 'audio_management' ? <AudioManagement /> : null}
             {isLoggedIn && selectedKey === 'user_management' ? <UserManagement /> : null}
           </Col>
